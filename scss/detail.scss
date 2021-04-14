@@ -1,48 +1,46 @@
 @import 'variables';
 
-.text{
+.body{
   font-family: 'Roboto', sans-serif;
 }
 
 .container-text{
   display: flex;
   flex-direction: column;
+
+  .book-title{
+    color: $black;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 52px;
+  }
+  
+  .title-genre{
+    color: $gray;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-right: 55px;
+  }
 }
 
 .container-secondary-text{
   display: flex;
   flex-direction: column;
+
+  .secondary-title{
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  
+  .secondary-detail{
+    color: $gray;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 36px;
+  }
 }
 
-.book-title{
-  @extend .text;
-  color: $black;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 38px;
-}
-
-.title-genre{
-  @extend .text;
-  color: $gray;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  margin-right: 55px;
-}
-
-.secondary-title{
-  @extend .text;
-  color: $black;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.secondary-detail{
-  @extend .text;
-  color: $gray;
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0 0 36px;
-}
