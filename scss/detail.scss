@@ -1,5 +1,14 @@
 @import 'variables';
 
+.master-container{
+  display: flex;
+  height: 768px;
+  width: 1366px;
+  background-color: $wild-sand;
+  justify-content: center;
+  align-items: center;
+}
+
 .text{
   font-family: 'Roboto', sans-serif;
 }
@@ -20,6 +29,19 @@
   height: 368px;
   width: 261px;
   margin: 24px 52px 24px 24px;
+}
+
+.badge{
+  position: absolute;
+  display: flex;
+  height: 119px;
+  width: 95px;
+  transform: rotate(15deg);
+  top: 178px;
+  right: 815px;
+  bottom: 472px;
+  left: 457px;
+  z-index: 1;
 }
 
 .cover-text-container{
