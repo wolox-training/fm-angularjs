@@ -4,6 +4,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.container-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-secondary-text{
+  display: flex;
+  flex-direction: column;
+}
+
 .book-title{
   @extend .text;
   color: $black;
