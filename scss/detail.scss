@@ -14,6 +14,18 @@
   flex-direction: column;
 }
 
+.cover-page{
+  display: flex;
+  height: 368px;
+  width: 261px;
+  margin: 0 52px 0 0;
+}
+
+.cover-text-container{
+  display: flex;
+  flex-direction: row;
+}
+
 .book-title{
   @extend .text;
   color: $black;
