@@ -12,6 +12,25 @@
   justify-content: center;
   align-items: center;
 
+  .return-button{
+    display: flex;
+    flex-direction: row;
+    color: $black;
+    font-size: 20px;
+    line-height: 24px;
+    position: absolute;
+    top: 46px;
+    right: 1042px;
+    bottom: 702px;
+    left: 265px;
+    content: "book-list.html";
+  }
+
+  .return-button::before{
+    margin-right: 12px;
+    content: url(https://trello-attachments.s3.amazonaws.com/607457e8ad4162814da41ef0/607457e8ad4162814da41f0a/x/e42f9110cec094df3e49702baa8263f7/back-arrow-20.png);
+  }
+
   .navbar-container{
     position: fixed;
     top: 0;
