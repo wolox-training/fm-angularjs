@@ -4,11 +4,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.container-text{
+.container-book{
   display: flex;
   flex-direction: column;
 
-  .book-title{
+  .title{
     color: $black;
     font-size: 32px;
     font-weight: 700;
@@ -16,7 +16,7 @@
     margin-bottom: 52px;
   }
   
-  .title-genre{
+  .genre{
     color: $gray;
     font-size: 24px;
     font-weight: 700;
@@ -25,18 +25,18 @@
   }
 }
 
-.container-secondary-text{
+.container-details{
   display: flex;
   flex-direction: column;
 
-  .secondary-title{
+  .title{
     color: $black;
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
   }
   
-  .secondary-detail{
+  .detail{
     color: $gray;
     font-size: 20px;
     line-height: 24px;
