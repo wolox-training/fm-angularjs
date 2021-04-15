@@ -27,12 +27,12 @@
       margin: 24px 52px 24px 24px;
     }
   
-    .container-text{
+    .container-book{
       display: flex;
       flex-direction: column;
       margin-top: 24px;
     
-      .book-title{
+      .title{
         color: $black;
         font-size: 32px;
         font-weight: 700;
@@ -46,7 +46,7 @@
         margin-bottom: 36px;
       }
       
-      .title-genre{
+      .genre{
         color: $gray;
         font-size: 24px;
         font-weight: 700;
@@ -55,18 +55,18 @@
       }
     }
     
-    .container-secondary-text{
+    .container-detail{
       display: flex;
       flex-direction: column;
     
-      .secondary-title{
+      .title{
         color: $black;
         font-size: 20px;
         font-weight: 700;
         line-height: 24px;
       }
       
-      .secondary-detail{
+      .detail{
         color: $gray;
         font-size: 20px;
         line-height: 24px;
