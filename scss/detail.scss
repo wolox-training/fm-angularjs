@@ -1,25 +1,7 @@
 @import 'variables';
 
-.text{
+.body{
   font-family: 'Roboto', sans-serif;
-}
-
-.container-text{
-  display: flex;
-  flex-direction: column;
-  margin-top: 24px;
-}
-
-.container-secondary-text{
-  display: flex;
-  flex-direction: column;
-}
-
-.cover-page{
-  display: flex;
-  height: 368px;
-  width: 261px;
-  margin: 24px 52px 24px 24px;
 }
 
 .cover-text-container{
@@ -29,44 +11,59 @@
   width: 900px;
   background-color: $white;
   box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
+
+  .cover-page{
+    display: flex;
+    height: 368px;
+    width: 261px;
+    margin: 24px 52px 24px 24px;
+  }
+
+  .container-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  
+    .book-title{
+      color: $black;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+    }
+    
+    .title-border{
+      height: 4px;
+      width: 540px;
+      background-color: $earls-green;
+      margin-bottom: 36px;
+    }
+    
+    .title-genre{
+      color: $gray;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  .container-secondary-text{
+    display: flex;
+    flex-direction: column;
+  
+    .secondary-title{
+      color: $black;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    
+    .secondary-detail{
+      color: $gray;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 36px;
+    }
+  }
 }
 
-.book-title{
-  @extend .text;
-  color: $black;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 38px;
-}
-
-.title-border{
-  height: 4px;
-  width: 540px;
-  background-color: $earls-green;
-  margin-bottom: 36px;
-}
-
-.title-genre{
-  @extend .text;
-  color: $gray;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  margin-bottom: 12px;
-}
-
-.secondary-title{
-  @extend .text;
-  color: $black;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.secondary-detail{
-  @extend .text;
-  color: $gray;
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0 0 36px;
-}
