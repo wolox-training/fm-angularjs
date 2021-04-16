@@ -1,0 +1,46 @@
+@import 'variables';
+
+.body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-book{
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    color: $black;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 52px;
+  }
+  
+  .genre{
+    color: $gray;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-right: 55px;
+  }
+}
+
+.container-details{
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  
+  .detail{
+    color: $gray;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 36px;
+  }
+}
+
