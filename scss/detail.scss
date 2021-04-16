@@ -190,6 +190,85 @@
     left: 457px;
     z-index: 1;
   }
+
+  /* Mobile view */
+  @media only screen and (max-width: 1024px){
+    height: 667px;
+    width: 376px;
+  
+    .return-button{
+      font-size: 18px;
+      line-height: 24px;
+      position: absolute;
+      top: 637px;
+      right: 142px;
+      bottom: 25px;
+      left: 142px;
+    }
+
+    .cover-text-container{
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 570px;
+      width: 336px;
+
+      .cover-page{
+        height: 299px;
+        width: 212px;
+        margin: 0 0 0 0;
+      }
+
+      .container-text{
+        margin-top: 0;
+        justify-content: space-evenly;
+  
+        .book-title{
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 38px;
+        }
+
+        .title-border{
+          height: 4px;
+          width: 300px;
+          margin-bottom: 18px;
+        }
+        
+        .title-genre{
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 19px;
+          margin-bottom: 0;
+        }
+      }
+
+      .container-secondary-text{
+      
+        .secondary-title{
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        
+        .secondary-detail{
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+    .badge{
+      $width: 95px;
+      width: calc(#{$width * 0.7});
+      $height: 119px;
+      height: calc(#{$height * 0.7});
+      top: 62px;
+      right: 65px;
+      bottom: 534px;
+      left: 245px;
+    }
+  }
 }
 
 .login-container{
