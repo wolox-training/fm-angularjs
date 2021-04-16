@@ -192,13 +192,89 @@
   }
 }
 
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 300px;
+  background-color: $wild-sand;
+  padding-bottom: 24px;
 
+  .border{
+    height: 8px;
+    width: 300px;
+    background-color: $cerulean;
+  }
 
+  .wolox-logo{
+    align-self: center;
+    height: 70px;
+    width: 212px;
+  }
 
+  .text{
+    display: flex;
+    align-self: flex-start;
+    color: $black;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 24px;
+  }
 
+  .credentials-box{
+    height: 32px;
+    width: 252px;
+    border-radius: 5px;
+    background-color: $white;
+  }
 
+  .button{
 
+    .login-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+      width: 252px;
+      border-radius: 5px;
+      background-color: $earls-green;
 
+      .login-text{
+        color: $white;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
 
+    .signup-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      height: 32px;
+      width: 252px;
+      border-radius: 5px;
+      background-color: $wild-sand;
+      border: 2px solid $earls-green;
 
+      .signup-text{
+        color: $earls-green;
+        font-size: 16px;
+        line-height: 24px;
+        background-color: $wild-sand;
+      }
 
+    }
+  }
+
+  .separator{
+    height: 2px;
+    width: 252px;
+    background-color: $silver-chalice;  
+  }
+
+}
