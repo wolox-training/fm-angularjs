@@ -6,7 +6,6 @@
 
 .cover-text-container{
   display: flex;
-  flex-direction: row;
   height: 416px;
   width: 900px;
   background-color: $white;
@@ -29,13 +28,13 @@
       font-size: 32px;
       font-weight: 700;
       line-height: 38px;
-    }
-    
-    .title-border{
-      height: 4px;
-      width: 540px;
-      background-color: $earls-green;
-      margin-bottom: 36px;
+
+      .title-border{
+        height: 4px;
+        width: 540px;
+        background-color: $earls-green;
+        margin-bottom: 36px;
+      }
     }
     
     .genre{
