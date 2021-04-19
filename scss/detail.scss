@@ -1,5 +1,3 @@
-@import 'variables';
-
 .body {
   font-family: 'Roboto', sans-serif;
 }
@@ -14,42 +12,49 @@
     margin-right: 52px;
   }
 
-  .container-book {
+  .container-text {
     display: flex;
     flex-direction: column;
-  
-    .book-title {
-      color: $black;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 38px;
-      margin-bottom: 52px;
+    
+    .container-book {
+      display: flex;
+      flex-direction: row;
+    
+      .book-title {
+        color: $black;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        margin-bottom: 52px;
+      }
+      
+      .book-genre {
+        color: $gray;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-top: 5px;
+        margin-left: 8px;
+      }
     }
     
-    .book-genre {
-      color: $gray;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 28px;
-    }
-  }
-  
-  .container-detail {
-    display: flex;
-    flex-direction: column;
-  
-    .title {
-      color: $black;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 24px;
-    }
+    .container-detail {
+      display: flex;
+      flex-direction: column;
     
-    .detail {
-      color: $gray;
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 36px;
+      .title {
+        color: $black;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      
+      .detail {
+        color: $gray;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 36px;
+      }
     }
   }
 }
