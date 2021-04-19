@@ -1,24 +1,24 @@
 @import 'variables';
 
-.body{
+.body {
   font-family: 'Roboto', sans-serif;
 }
 
-.cover-text-container{
+.cover-text-container {
   display: flex;
-  flex-direction: row;
 
-  .cover-page{
+  .cover-page {
     display: flex;
     height: 368px;
     width: 261px;
     margin-right: 52px;
   }
-  .container-book{
+
+  .container-book {
     display: flex;
     flex-direction: column;
-
-    .title{
+  
+    .book-title {
       color: $black;
       font-size: 32px;
       font-weight: 700;
@@ -26,26 +26,26 @@
       margin-bottom: 52px;
     }
     
-    .genre{
+    .book-genre {
       color: $gray;
       font-size: 24px;
       font-weight: 700;
       line-height: 28px;
     }
   }
-
-  .container-details{
+  
+  .container-detail {
     display: flex;
     flex-direction: column;
-
-    .title{
+  
+    .title {
       color: $black;
       font-size: 20px;
       font-weight: 700;
       line-height: 24px;
     }
     
-    .detail{
+    .detail {
       color: $gray;
       font-size: 20px;
       line-height: 24px;
