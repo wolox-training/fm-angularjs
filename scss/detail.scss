@@ -14,11 +14,10 @@
     width: 261px;
     margin-right: 52px;
   }
-
   .container-book{
     display: flex;
     flex-direction: column;
-  
+
     .title{
       color: $black;
       font-size: 32px;
@@ -34,11 +33,11 @@
       line-height: 28px;
     }
   }
-  
-  .container-detail{
+
+  .container-details{
     display: flex;
     flex-direction: column;
-  
+
     .title{
       color: $black;
       font-size: 20px;
@@ -51,6 +50,6 @@
       font-size: 20px;
       line-height: 24px;
       margin-bottom: 36px;
-    }  
+    }
   }
 }
