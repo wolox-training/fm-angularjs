@@ -1,67 +1,69 @@
-@import 'variables';
-
-.body{
+.body {
   font-family: 'Roboto', sans-serif;
 }
 
-.cover-text-container{
+.cover-text-container {
   display: flex;
-  height: 416px;
+    height: 416px;
   width: 900px;
   background-color: $white;
   box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
 
-  .cover-page{
+  .cover-page {
     display: flex;
     height: 368px;
     width: 261px;
     margin: 24px 52px 24px 24px;
   }
 
-  .container-book{
+  .container-text {
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
-  
-    .title{
-      color: $black;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 38px;
-
-      .title-border{
-        height: 4px;
-        width: 540px;
-        background-color: $earls-green;
-        margin-bottom: 36px;
+    
+    .container-book {
+      display: flex;
+      flex-direction: row;
+      width: 540px;
+      margin-top: 24px;
+      margin-bottom: 52px;
+      border-width: 4px;
+      border-bottom-style: solid;
+      border-color: $earls-green;
+    
+      .book-title {
+        color: $black;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+      }
+      
+      .book-genre {
+        color: $gray;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-top: 5px;
+        margin-left: 8px;
       }
     }
     
-    .genre{
-      color: $gray;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 28px;
-      margin-bottom: 12px;
-    }
-  }
-  
-  .container-detail{
-    display: flex;
-    flex-direction: column;
-  
-    .title{
-      color: $black;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 24px;
-    }
+    .container-detail {
+      display: flex;
+      flex-direction: column;
     
-    .detail{
-      color: $gray;
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 36px;
+      .title {
+        color: $black;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      
+      .detail {
+        color: $gray;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 36px;
+      }
     }
   }
 }
