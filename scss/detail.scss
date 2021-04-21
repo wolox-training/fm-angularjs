@@ -1,46 +1,59 @@
-@import 'variables';
-
-.body{
+.body {
   font-family: 'Roboto', sans-serif;
 }
 
-.container-book{
+.cover-text-container {
   display: flex;
-  flex-direction: column;
 
-  .title{
-    color: $black;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38px;
-    margin-bottom: 52px;
+  .cover-page {
+    display: flex;
+    height: 368px;
+    width: 261px;
+    margin-right: 52px;
   }
-  
-  .genre{
-    color: $gray;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    margin-right: 55px;
+
+  .container-text {
+    display: flex;
+    flex-direction: column;
+    
+    .container-book {
+      display: flex;
+    
+      .book-title {
+        color: $black;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        margin-bottom: 52px;
+      }
+      
+      .book-genre {
+        color: $gray;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-top: 5px;
+        margin-left: 8px;
+      }
+    }
+    
+    .container-detail {
+      display: flex;
+      flex-direction: column;
+    
+      .title {
+        color: $black;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      
+      .detail {
+        color: $gray;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 36px;
+      }
+    }
   }
 }
-
-.container-details{
-  display: flex;
-  flex-direction: column;
-
-  .title{
-    color: $black;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-  }
-  
-  .detail{
-    color: $gray;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 36px;
-  }
-}
-
