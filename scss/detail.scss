@@ -12,17 +12,30 @@
   
   .cover-text-container {
     display: flex;
-    flex-direction: row;
     height: 416px;
     width: 900px;
     background-color: $white;
     box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
 
-    .cover-page {
+    .cover-page-badge-container {
       display: flex;
-      height: 368px;
-      width: 261px;
-      margin: 24px 52px 24px 24px;
+      position: relative;
+      
+      .cover-page {
+        height: 368px;
+        width: 261px;
+        margin: 24px 52px 24px 24px;
+      }
+      .badge {
+        position: absolute;
+        display: flex;
+        height: 119px;
+        width: 95px;
+        transform: rotate(15deg);
+        right: 25px;
+        top: 10px;
+        z-index: 1;
+      }
     }
 
     .container-text {
@@ -73,17 +86,5 @@
         margin-bottom: 36px;
       }
     }
-  }
-  .badge{
-    position: absolute;
-    display: flex;
-    height: 119px;
-    width: 95px;
-    transform: rotate(15deg);
-    top: 178px;
-    right: 815px;
-    bottom: 472px;
-    left: 457px;
-    z-index: 1;
   }
 }
