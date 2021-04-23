@@ -1,6 +1,4 @@
-@import 'variables';
-
-.body{
+.body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -11,164 +9,83 @@
   background-color: $wild-sand;
   justify-content: center;
   align-items: center;
-
-  .navbar-container{
-    position: fixed;
-    top: 0;
-
-    .border{
-      height: 6px;
-      width: 1366px;
-      background-color: $cerulean;
-    }
-
-    .navbar{
-      height: 70px;
-      width: 1366px;
-      background-color: $white;
-      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
-
-      .wolox-logo{
-        position: absolute;
-        left: 246px;
-        right: 908px;
-        height: 70px;
-        width: 212.42px;
-      }
-
-      .logout{
-        position: absolute;
-        top: 26px;
-        right: 246px;
-        bottom: 26px;
-        left: 1057px;
-        color: $black;
-        font-size: 18px;
-        line-height: 21px;
-      }
-    }
-  }
-
-  .master-book-list-container{
+  
+  .cover-text-container {
     display: flex;
-    height: 636px;
-    width: 900px;
-    background-color: $wild-sand;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 36px;
-  
-    .book-container{
-      display: flex;
-      height: 300px;
-      width: 198px;
-      background-color: $white;
-      box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
-      flex-direction: column;
-      justify-content: center;
-  
-      .cover-page-list{
-        height: 200px;
-        width: 142px;
-        align-self: center;
-      }
-  
-      .book-list-detail{
-        display: flex;
-        flex-direction: column;
-        margin-top: 12px;
-        padding-left: 28px;
-        
-  
-        .book-list-title{
-          color: $black;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 18px;
-          margin-bottom: 8px;
-        }
-  
-        .book-list-autor{
-          color: $gray;
-          font-size: 14px;
-          line-height: 18px;
-        }
-      }
-    }
-  }
-  .cover-text-container{
-    display: flex;
-    flex-direction: row;
     height: 416px;
     width: 900px;
     background-color: $white;
     box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
-  
-    .cover-page{
+
+    .cover-page-badge-container {
       display: flex;
-      height: 368px;
-      width: 261px;
-      margin: 24px 52px 24px 24px;
+      position: relative;
+      
+      .cover-page {
+        height: 368px;
+        width: 261px;
+        margin: 24px 52px 24px 24px;
+      }
+      
+      .badge {
+        position: absolute;
+        display: flex;
+        height: 119px;
+        width: 95px;
+        transform: rotate(15deg);
+        right: 25px;
+        top: 10px;
+        z-index: 1;
+      }
     }
-  
-    .container-text{
+
+    .container-text {
       display: flex;
       flex-direction: column;
-      margin-top: 24px;
-    
-      .book-title{
+      
+      .container-book {
+        display: flex;
+        width: 540px;
+        margin-top: 24px;
+        margin-bottom: 52px;
+        border-bottom: 4px solid $earls-green;
+      
+        
+        .book-title {
         color: $black;
         font-size: 32px;
         font-weight: 700;
         line-height: 38px;
-      }
-      
-      .title-border{
-        height: 4px;
-        width: 540px;
-        background-color: $earls-green;
-        margin-bottom: 36px;
-      }
-      
-      .title-genre{
-        color: $gray;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28px;
         margin-bottom: 12px;
+        }
+      
+        .book-genre {
+          color: $gray;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28px;
+          margin-top: 5px;
+          margin-left: 8px;
+        }
       }
     }
-    
-    .container-secondary-text{
+    .container-detail {
       display: flex;
       flex-direction: column;
     
-      .secondary-title{
+      .title {
         color: $black;
         font-size: 20px;
         font-weight: 700;
         line-height: 24px;
       }
       
-      .secondary-detail{
+      .detail {
         color: $gray;
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 36px;
       }
     }
-  }
-  .badge{
-    position: absolute;
-    display: flex;
-    height: 119px;
-    width: 95px;
-    transform: rotate(15deg);
-    top: 178px;
-    right: 815px;
-    bottom: 472px;
-    left: 457px;
-    z-index: 1;
   }
 }
