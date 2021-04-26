@@ -7,22 +7,22 @@
   align-items: center;
   
   .master-book-list-container{
-      display: flex;
-      height: 636px;
-      width: 900px;
-      background-color: $wild-sand;
-      flex-flow: column wrap;
-      justify-content: space-around;
-      align-items: center;
+    display: flex;
+    height: 636px;
+    width: 900px;
+    background-color: $wild-sand;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
     
       .book-container{
-          display: flex;
-          height: 300px;
-          width: 198px;
-          background-color: $white;
-          box-shadow: 4px 4px 10px 0 $black-rgba;
-          flex-direction: column;
-          justify-content: center;
+        display: flex;
+        height: 300px;
+        width: 198px;
+        background-color: $white;
+        box-shadow: 4px 4px 10px 0 $black-rgba;
+        flex-direction: column;
+        justify-content: center;
     
           .cover-page-list{
             height: 200px;
@@ -31,10 +31,10 @@
            }
     
           .book-list-detail{
-              display: flex;
-              flex-direction: column;
-              margin-top: 12px;
-              padding-left: 28px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 12px;
+            padding-left: 28px;
           
     
              .book-list-title{
@@ -51,6 +51,6 @@
                 line-height: 18px;
               }
             }
-        }
-    }
+      }
+  }
 }
