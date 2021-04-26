@@ -7,91 +7,79 @@
   height: 768px;
   width: 1366px;
   background-color: $wild-sand;
-  justify-content: center;
-  align-items: center;
 
-  .navbar-container{
-      position: fixed;
-      top: 0;
-
-      .border{
-        height: 6px;
-        width: 1366px;
-        background-color: $cerulean;
-      }
-
-      .navbar{
-          height: 70px;
-          width: 1366px;
-          background-color: $white;
-          box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
-
-          .wolox-logo{
-            position: absolute;
-            left: 246px;
-            right: 908px;
-            height: 70px;
-            width: 212.42px;
-          }
-
-          .logout{
-            position: absolute;
-            top: 26px;
-            right: 246px;
-            bottom: 26px;
-            left: 1057px;
-            color: $black;
-            font-size: 18px;
-            line-height: 21px;
-          }
-        }
+  .navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    border-top: 6px solid $cerulean; 
+    height: 70px;
+    width: 100%;
+    max-width: 1366px;
+    background-color: $white;
+    box-shadow: 0 4px 10px 0 $blackRGBA;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    
+    .wolox-logo {
+      height: 70px;
+      width: 212px;
     }
+
+    .logout {
+      color: $black;
+      font-size: 18px;
+      line-height: 21px;
+      margin-left: 150px;
+    }
+  }
   
-  .master-book-list-container{
+  .master-book-list-container {
+    display: flex;
+    height: 636px;
+    width: 900px;
+    background-color: $wild-sand;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    .book-container {
       display: flex;
-      height: 636px;
-      width: 900px;
-      background-color: $wild-sand;
-      flex-flow: column wrap;
-      justify-content: space-around;
-      align-items: center;
+      height: 300px;
+      width: 198px;
+      background-color: $white;
+      box-shadow: 4px 4px 10px 0 $blackRGBA;
+      flex-direction: column;
+      justify-content: center;
     
-      .book-container{
-          display: flex;
-          height: 300px;
-          width: 198px;
-          background-color: $white;
-          box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
-          flex-direction: column;
-          justify-content: center;
-    
-          .cover-page-list{
-            height: 200px;
-            width: 142px;
-            align-self: center;
-           }
-    
-          .book-list-detail{
-              display: flex;
-              flex-direction: column;
-              margin-top: 12px;
-              padding-left: 28px;
-          
-    
-             .book-list-title{
-                color: $black;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 18px;
-                margin-bottom: 8px;
-              }
-    
-             .book-list-autor{
-                color: $gray;
-                font-size: 14px;
-                line-height: 18px;
-              }
-            }
+      .cover-page-list {
+        height: 200px;
+        width: 142px;
+        align-self: center;
         }
+    
+      .book-list-detail {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+        padding-left: 28px;
+          
+        .book-list-title {
+          color: $black;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 18px;
+          margin-bottom: 8px;
+        }
+    
+        .book-list-autor {
+          color: $gray;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
     }
+  }
 }
