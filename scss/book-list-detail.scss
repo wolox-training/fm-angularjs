@@ -1,7 +1,3 @@
-.body{
-  font-family: 'Roboto', sans-serif;
-}
-
 .master-container{
   display: flex;
   height: 768px;
@@ -18,7 +14,7 @@
     width: 100%;
     max-width: 1366px;
     background-color: $white;
-    box-shadow: 0 4px 10px 0 $blackRGBA;
+    box-shadow: 0 4px 10px 0 $black-rgba;
     align-items: center;
     align-content: center;
     justify-content: space-around;
@@ -61,7 +57,7 @@
       height: 300px;
       width: 198px;
       background-color: $white;
-      box-shadow: 4px 4px 10px 0 $blackRGBA;
+      box-shadow: 4px 4px 10px 0 $black-rgba;
       flex-direction: column;
       justify-content: center;
     
