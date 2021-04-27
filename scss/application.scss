@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import 'equalizer';
+@import 'variables';
 @import 'detail';
+@import 'book-list-detail';
+
+.body{
+    font-family: 'Roboto', sans-serif;
+}
