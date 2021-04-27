@@ -8,7 +8,7 @@
   width: 1366px;
   background-color: $wild-sand;
 
-  .navbar {
+  .navbar-container {
     position: fixed;
     display: flex;
     top: 0;
@@ -22,16 +22,28 @@
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    
-    .wolox-logo {
-      height: 70px;
-      width: 212px;
-    }
 
-    .logout {
-      color: $black;
-      font-size: 18px;
-      line-height: 21px;
+    .navbar {
+      display: flex;
+      height: 70px;
+      width: 100%;
+      max-width: 900px;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+      .wolox-logo {
+        height: 70px;
+        width: 212px;
+      }
+  
+      .logout {
+        color: $black;
+        font-size: 18px;
+        line-height: 21px;
+      }
     }
   }
   
