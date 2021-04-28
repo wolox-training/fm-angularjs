@@ -1,10 +1,25 @@
 .master-container {
   display: flex;
+  flex-direction: column;
   height: 768px;
   width: 1366px;
   background-color: $wild-sand;
   justify-content: center;
   align-items: center;
+
+  .return-button {
+    align-self: flex-start;
+    color: $black;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 108px;
+    margin-left: 233px;
+  }
+
+  .return-button::before {
+    margin-right: 12px;
+    content: url(Images/back-arrow-20.png);
+  }
   
   .cover-text-container {
     position: relative;
@@ -13,20 +28,6 @@
     width: 900px;
     background-color: $white;
     box-shadow: 4px 4px 10px 0 $black-rgba;
-
-    .return-button {
-      display: flex;
-      position: absolute;
-      color: $black;
-      font-size: 20px;
-      line-height: 24px;
-      top: -108px;
-    }
-  
-    .return-button::before {
-      margin-right: 12px;
-      content: url(Images/back-arrow-20.png);
-    }
 
     .cover-page-badge-container {
       display: flex;
