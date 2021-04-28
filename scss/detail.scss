@@ -14,11 +14,11 @@
     line-height: 24px;
     margin-bottom: 108px;
     margin-left: 233px;
-  }
 
-  .return-button::before {
-    margin-right: 12px;
-    content: url(Images/back-arrow-20.png);
+    &::before{
+      margin-right: 12px;
+      content: url(Images/back-arrow-20.png);
+    }
   }
   
   .cover-text-container {
