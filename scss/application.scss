@@ -5,6 +5,34 @@
 @import 'book-list-detail';
 @import 'login-detail';
 
-.body{
+.body {
     font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+
+  .action-button {
+    height: 32px;
+    width: 252px;
+    border-radius: 5px;
+    background-color: $earls-green;
+    color: $white;
+  }
+
+  .redirection-button {
+    height: 32px;
+    width: 252px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: $wild-sand;
+    border: 2px solid $earls-green;
+    color: $earls-green;
+    background-color: $wild-sand;
+  }
 }

@@ -1,4 +1,4 @@
-.master-container{
+.master-container {
   display: flex;
   max-width: 1366px;
   width: 100%;
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   
-  .master-book-list-container{
+  .master-book-list-container {
     display: flex;
     height: 636px;
     width: 900px;
@@ -15,7 +15,7 @@
     justify-content: space-around;
     align-items: center;
     
-      .book-container{
+      .book-container {
         display: flex;
         height: 300px;
         width: 198px;
@@ -24,20 +24,20 @@
         flex-direction: column;
         justify-content: center;
     
-          .cover-page-list{
+          .cover-page-list {
             height: 200px;
             width: 142px;
             align-self: center;
            }
     
-          .book-list-detail{
+          .book-list-detail {
             display: flex;
             flex-direction: column;
             margin-top: 12px;
             padding-left: 28px;
           
     
-             .book-list-title{
+             .book-list-title {
                 color: $black;
                 font-size: 16px;
                 font-weight: 700;
@@ -45,7 +45,7 @@
                 margin-bottom: 8px;
               }
     
-             .book-list-autor{
+             .book-list-autor {
                 color: $gray;
                 font-size: 14px;
                 line-height: 18px;
