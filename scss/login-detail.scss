@@ -1,18 +1,10 @@
-.login-form{
+.login-master-container{
   display: flex;
-  flex-direction: column;
+  height: 768px;
+  width: 100%;
+  max-width: 1366px;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid $silver-chalice;
-  margin-top: 16px;
-
-  .button:first-of-type{
-    margin-top: 8px;
-    margin-bottom: 16px;
-  }
-}
-
-.master-container{
   background-color: $white;
 
   .login-container {
@@ -48,8 +40,25 @@
       margin-bottom: 16px;
     }
 
+    .link-book-list{
+      color: $white;
+    }
+
     .redirection-button{
       margin-top: 16px;
     }
+  }
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid $silver-chalice;
+  margin-top: 16px;
+
+  .button:first-of-type{
+    margin: 8px 0 16px;
   }
 }
