@@ -1,39 +1,37 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>HTML & CSS Training</title>
   <meta name="description" content="training">
   <meta name="author" content="Wolox">
-  <link rel="stylesheet"  type="text/css" href="application.css">
+  <link rel="stylesheet" type="text/css" href="application.css">
 </head>
+
 <body>
-  <div class= "login-container">
-    <div class= "border">
-    </div>
-    <img class= "wolox-logo"
-      src= "https://trello-attachments.s3.amazonaws.com/607457e8ad4162814da41ef0/607457e8ad4162814da41f08/x/ab567d29d6f06a584a4102325415d39f/LogoWolox.png"
-      alt= "wolox logo"
-    >
-    <p class= "text"> Email </p>
-    <div class= "credentials-box">
-    </div>
-    <p class= "text"> Password </p>
-    <div class= "credentials-box">
-    </div>
-    <div class= "button">
-        <a href= "book-list.html" class = "login-button">
-          <p class= "login-text"> Login </p>    
-        </a>
-    </div>
-    <div class= "separator">
-    </div>
-    <div class= "button">
-        <div class= "signup-button">
-          <p class= "signup-text"> Sign Up </p>    
-        </div>
+  <div class="login-master-container">
+    <div class="login-container">
+      <img class="wolox-logo"
+        src="https://trello-attachments.s3.amazonaws.com/607457e8ad4162814da41ef0/607457e8ad4162814da41f08/x/ab567d29d6f06a584a4102325415d39f/LogoWolox.png"
+        alt="wolox logo">
+      <form class="login-form">
+        <p class="text"> Email </p>
+        <input class="credentials-box">
+        </input>
+        <p class="text"> Password </p>
+        <input class="credentials-box">
+        </input>
+        <button href="book-list.html" class="button action-button">
+          Login
+        </button>
+      </form>
+      <button class="button redirection-button">
+        Sign Up
+      </button>
     </div>
   </div>
 </body>
+
 </html>
