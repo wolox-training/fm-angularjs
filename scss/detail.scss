@@ -1,7 +1,8 @@
 .index-master-container {
   display: flex;
   height: 768px;
-  width: 1366px;
+  max-width: 1366px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -98,6 +99,99 @@
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 36px;
+      }
+    }
+  }
+  @media only screen and (max-width: $flex-mobile) {
+    height: 667px;
+    width: 100%;
+    flex-direction: column-reverse;
+  
+    .return-button {
+      align-self: center;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 20px 0 0 0;
+
+      &::before {
+        margin-right: 12px;
+      }
+    }
+
+    .cover-text-container {
+      flex-direction: column;
+      align-items: center;
+      height: 570px;
+      width: 336px;
+
+      .cover-page-badge-container {
+        margin-bottom: 21px;
+        
+        .cover-page {
+          height: 299px;
+          width: 212px;
+          margin: 38px 0 0 0;
+        }
+        
+        .badge {
+          $width: 95px;
+          width: calc(#{$width} * 0.7);
+          $height: 119px;
+          height: calc(#{$height} * 0.7);
+          right: -16px;
+          top: 27px;
+        }
+      }
+
+      .container-text {
+        display: flex;
+        flex-direction: column;
+        height: 570px;
+        width: 336px;
+        
+        .container-book {
+          display: flex;
+          justify-content: flex-start;
+          width: 300px;
+          margin: 0 0 0 0;
+          border-bottom: 4px solid $earls-green;
+          margin-left: 16px;
+        
+          .book-title {
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 38px;
+          }
+        
+          .book-genre {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19px;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .container-detail {
+        display: flex;
+        justify-content: flex-start;
+        width: 300px;
+        margin: 0 0 0 0;
+        padding-left: 16px;
+        margin-top: 18px;
+
+        .title {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        
+        .detail {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 18px;
+        }
       }
     }
   }
