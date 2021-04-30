@@ -1,13 +1,14 @@
 .index-master-container {
-  display: flex;
+  display: grid;
   height: 768px;
   max-width: 1366px;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: $wild-sand;
-
+  grid-template-rows: 768px;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas: 
+  "cover-text";
 
   .return-button {
     align-self: flex-start;
@@ -25,20 +26,30 @@
   
   .cover-text-container {
     position: relative;
-    display: flex;
+    display: grid;
+    align-self: center;
+    grid-area: cover-text;
     height: 416px;
     width: 900px;
     background-color: $white;
     box-shadow: 4px 4px 10px 0 $black-rgba;
+    grid-template-columns: 309px 250px 341px;
+    grid-template-rows: 75px 341px;
+    grid-template-areas:
+    "image titulo genero"
+    "image text text";
 
     .cover-page-badge-container {
       display: flex;
       position: relative;
-      
+      grid-area: image;
+      align-content: center;
+      justify-content: center;
+
       .cover-page {
         height: 368px;
         width: 261px;
-        margin: 24px 52px 24px 24px;
+        align-self: center;
       }
       
       .badge {
@@ -47,71 +58,86 @@
         height: 119px;
         width: 95px;
         transform: rotate(15deg);
-        right: 25px;
+        right: 0px;
         top: 10px;
         z-index: 1;
       }
     }
 
+    .book-title {
+      height: 40px;
+      color: $black;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+      align-self: center;
+      grid-area: titulo;
+      margin-left: 28px;
+    }
+  
+    .book-genre {
+      height: 40px;
+      color: $gray;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28px;
+      align-self: center;
+      margin-top: 8px;
+      grid-area: genero;
+      margin-left: 20px;
+    }
+
     .container-text {
+      grid-area: text;
       display: flex;
       flex-direction: column;
+      margin-left: 28px;
       
       .container-book {
         display: flex;
         width: 540px;
-        margin-top: 24px;
-        margin-bottom: 52px;
-        border-bottom: 4px solid $earls-green;
-      
-        
-        .book-title {
-        color: $black;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
-        margin-bottom: 12px;
-        }
-      
-        .book-genre {
-          color: $gray;
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 28px;
-          margin-top: 5px;
-          margin-left: 8px;
-        }
-      }
-    }
-    .container-detail {
-      display: flex;
-      flex-direction: column;
-    
-      .title {
-        color: $black;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-      }
-      
-      .detail {
-        color: $gray;
-        font-size: 20px;
-        line-height: 24px;
         margin-bottom: 36px;
+        border-bottom: 4px solid $earls-green;
+      }
+
+      .container-detail {
+        display: flex;
+        flex-direction: column;
+      
+        .title {
+          color: $black;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        
+        .detail {
+          color: $gray;
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 36px;
+        }
       }
     }
   }
-  @media only screen and (max-width: $flex-mobile) {
-    height: 667px;
-    width: 100%;
-    flex-direction: column-reverse;
-  
+
+  @media only screen and (max-width: $tablet){
+    height: 768px;
+    width: 1024px;
+    display: grid;
+    grid-template-rows: 99px 569px 100px;
+    grid-template-areas:
+      "return-button"
+      "container"
+      ".";
+
     .return-button {
-      align-self: center;
       font-size: 18px;
-      line-height: 24px;
-      margin: 20px 0 0 0;
+      content: "book-list.html";
+      grid-area: return-button;
+      justify-self: flex-start;
+      margin: 0;
+      margin-top: 20px;
 
       &::before {
         margin-right: 12px;
@@ -119,18 +145,31 @@
     }
 
     .cover-text-container {
-      flex-direction: column;
-      align-items: center;
-      height: 570px;
-      width: 336px;
+      display: grid;
+      height: 569px;
+      width: 853px;
+      grid-area: container;
+      justify-items: center;
+      grid-template-columns: 329px 524px; 
+      grid-template-rows: 71px 74px 368px 56px;
+      justify-self: center;
+      margin: 0;
+      grid-template-areas:
+        ". title"
+        ". genre"
+        "image description"
+        ". .";
 
       .cover-page-badge-container {
-        margin-bottom: 21px;
-        
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        grid-area: image;
+
         .cover-page {
-          height: 299px;
-          width: 212px;
-          margin: 38px 0 0 0;
+          height: 368px;
+          width: 261px;
+          margin: 0px 0px 0px 0px;
         }
         
         .badge {
@@ -139,60 +178,194 @@
           $height: 119px;
           height: calc(#{$height} * 0.7);
           right: -16px;
-          top: 27px;
+          top: -10px;
         }
+      }
+
+      .book-title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        margin: 0;
+        grid-area: title;
+        justify-self: flex-start;
+        align-self: flex-end;
+      }
+      
+      .book-genre {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        margin: 0;
+        grid-area: genre;
+        justify-self: flex-start;
+        align-self: flex-start;
+        margin-left: 50px;
       }
 
       .container-text {
-        display: flex;
-        flex-direction: column;
-        height: 570px;
-        width: 336px;
-        
+        display: grid;
+        justify-self: flex-start;
+        align-self: center;
+        width: 470px;
+        margin: 0;
+        grid-area: description;
+        border-top: 0;
+        margin-right: 20px;
+
         .container-book {
-          display: flex;
-          justify-content: flex-start;
-          width: 300px;
+          display: grid;
+          width: 336px;
           margin: 0 0 0 0;
-          border-bottom: 4px solid $earls-green;
-          margin-left: 16px;
-        
-          .book-title {
-            color: $black;
+          border-bottom: 0;
+          grid-area: spacing;
+        }
+      
+        .container-detail {
+          display: flex;
+          padding-left: 0;
+          margin: 0;
+          grid-area: details;
+          
+          .title {
             font-size: 24px;
             font-weight: 700;
-            line-height: 38px;
+            line-height: 24px;
           }
-        
-          .book-genre {
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 19px;
-            margin-top: 10px;
+          
+          .detail {
+            font-size: 24px;
+            line-height: 24px;          
+            margin-bottom: 36px;
           }
         }
       }
+    }
+  }
 
-      .container-detail {
-        display: flex;
-        justify-content: flex-start;
-        width: 300px;
-        margin: 0 0 0 0;
-        padding-left: 16px;
-        margin-top: 18px;
+  @media only screen and (max-width: $mobile) {
+    height: 667px;
+    width: 376px;
+    display: grid;
+    grid-template-rows: 32px 570px 65px;
+    grid-template-areas:
+      "."
+      "container"
+      "return-button";
 
-        .title {
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 24px;
+    .return-button {
+      font-size: 18px;
+      content: "book-list.html";
+      grid-area: return-button;
+      justify-self: center;
+      margin: 0;
+      margin-top: 20px;
+
+      &::before {
+        margin-right: 12px;
+      }
+    }
+
+    .cover-text-container {
+      display: grid;
+      height: 570px;
+      width: 336px;
+      grid-area: container;
+      justify-items: center;
+      grid-template-columns: 336px;
+      grid-template-rows: 71px 299px 40px 160px;
+      justify-self: center;
+      margin: 0;
+      grid-template-areas:
+       "title"
+       "image"
+       "genre"
+       "description";
+
+      .cover-page-badge-container {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+
+        .cover-page {
+          height: 299px;
+          width: 212px;
+          margin: 0px 0px 0px 0px;
+          grid-area: image;
         }
         
-        .detail {
-          font-size: 14px;
-          line-height: 24px;
-          margin-bottom: 18px;
+        .badge {
+          $width: 95px;
+          width: calc(#{$width} * 0.7);
+          $height: 119px;
+          height: calc(#{$height} * 0.7);
+          right: -16px;
+          top: -10px;
+        }
+      }
+
+      .book-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 38px;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
+        grid-area: title;
+      }
+      
+      .book-genre {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        margin: 0;
+        grid-area: genre;
+        margin-top: 24px;
+        align-self: center;
+        justify-self: center;
+      }
+
+      .container-text {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        width: 300px;
+        margin-left: 18px;
+        margin-right: 18px;
+        grid-area: description;
+        border-top: 4px solid $earls-green;
+        grid-template-rows: 18px 126px;
+        grid-template-areas:
+        "spacing" 
+        "details";
+
+        .container-book {
+          display: grid;
+          width: 336px;
+          margin: 0 0 0 0;
+          border-bottom: 0;
+          grid-area: spacing;
+        }
+      
+        .container-detail {
+          padding-left: 0;
+          margin: 0;
+          grid-area: details;
+          
+          .title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+          }
+          
+          .detail {
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 18px;
+          }
         }
       }
     }
   }
 }
+
