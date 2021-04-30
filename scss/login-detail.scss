@@ -47,18 +47,18 @@
     .redirection-button{
       margin-top: 16px;
     }
-  }
-}
 
-.login-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px solid $silver-chalice;
-  margin-top: 16px;
-
-  .button:first-of-type{
-    margin: 8px 0 16px;
+    .login-form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid $silver-chalice;
+      margin-top: 16px;
+    
+      .button:first-of-type{
+        margin: 8px 0 16px;
+      }
+    }
   }
 }
