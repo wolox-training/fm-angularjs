@@ -1,11 +1,6 @@
-.master-container {
-  display: flex;
+.index-container {
   flex-direction: column;
-  height: 768px;
-  width: 1366px;
   background-color: $wild-sand;
-  justify-content: center;
-  align-items: center;
 
   .return-button {
     align-self: flex-start;
@@ -54,50 +49,49 @@
     .container-text {
       display: flex;
       flex-direction: column;
-      
+
       .container-book {
         display: flex;
         width: 540px;
         margin-top: 24px;
         margin-bottom: 52px;
         border-bottom: 4px solid $earls-green;
-      
-        
+
         .book-title {
-        color: $black;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
-        margin-bottom: 12px;
-        }
-      
-        .book-genre {
-          color: $gray;
-          font-size: 24px;
+          color: $black;
+          font-size: 32px;
           font-weight: 700;
-          line-height: 28px;
-          margin-top: 5px;
-          margin-left: 8px;
+          line-height: 38px;
+          margin-bottom: 12px;
+          }
+        
+          .book-genre {
+            color: $gray;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-left: 8px;
+          }
+      }
+      .container-detail {
+        display: flex;
+        flex-direction: column;
+      
+        .title {
+          color: $black;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        
+        .detail {
+          color: $gray;
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 36px;
         }
       }
     }
-    .container-detail {
-      display: flex;
-      flex-direction: column;
-    
-      .title {
-        color: $black;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-      }
-      
-      .detail {
-        color: $gray;
-        font-size: 20px;
-        line-height: 24px;
-        margin-bottom: 36px;
-      }
-    }
-  }
+  } 
 }
