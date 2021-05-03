@@ -1,3 +1,6 @@
+$width-badge: 95px;
+$height-badge: 119px;
+
 .index-container {
   flex-direction: column;
   background-color: $wild-sand;
@@ -37,8 +40,8 @@
       .badge {
         position: absolute;
         display: flex;
-        height: 119px;
-        width: 95px;
+        height: $height-badge;
+        width: $width-badge;
         transform: rotate(15deg);
         right: 25px;
         top: 10px;
@@ -70,8 +73,7 @@
           font-size: 24px;
           font-weight: 700;
           line-height: 28px;
-          margin-top: 5px;
-          margin-left: 8px;
+          margin: 5px 0 0 8px;
         }
       }
       .container-detail {
@@ -104,10 +106,6 @@
       font-size: 18px;
       line-height: 24px;
       margin: 20px 0 0 0;
-
-      &::before {
-        margin-right: 12px;
-      }
     }
 
     .cover-text-container {
@@ -126,38 +124,29 @@
         }
         
         .badge {
-          $width: 95px;
-          width: calc(#{$width} * 0.7);
-          $height: 119px;
-          height: calc(#{$height} * 0.7);
+          width: calc(#{$width-badge} * 0.7);
+          height: calc(#{$height-badge} * 0.7);
           right: -16px;
           top: 27px;
         }
       }
 
       .container-text {
-        display: flex;
-        flex-direction: column;
         height: 570px;
         width: 336px;
         
         .container-book {
-          display: flex;
           justify-content: flex-start;
           width: 300px;
-          margin: 0 0 0 0;
+          margin: 0 0 0 16px;
           border-bottom: 4px solid $earls-green;
-          margin-left: 16px;
         
           .book-title {
             color: $black;
             font-size: 24px;
-            font-weight: 700;
-            line-height: 38px;
           }
           .book-genre {
             font-size: 16px;
-            font-weight: 700;
             line-height: 19px;
             margin-top: 10px;
           }
@@ -172,14 +161,11 @@
           .title {
             color: $black;
             font-size: 14px;
-            font-weight: 700;
-            line-height: 24px;
           }
           
           .detail {
             color: $gray;
             font-size: 14px;
-            line-height: 24px;
             margin-bottom: 18px;
           }
         }
