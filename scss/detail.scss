@@ -1,13 +1,6 @@
-.index-master-container {
-  display: flex;
-  height: 768px;
-  max-width: 1366px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+.index-container {
   flex-direction: column;
   background-color: $wild-sand;
-
 
   .return-button {
     align-self: flex-start;
@@ -56,23 +49,22 @@
     .container-text {
       display: flex;
       flex-direction: column;
-      
+
       .container-book {
         display: flex;
         width: 540px;
         margin-top: 24px;
         margin-bottom: 52px;
         border-bottom: 4px solid $earls-green;
-      
-        
+
         .book-title {
-        color: $black;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
-        margin-bottom: 12px;
-        }
-      
+          color: $black;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 38px;
+          margin-bottom: 12px;
+          }
+        
         .book-genre {
           color: $gray;
           font-size: 24px;
@@ -82,26 +74,26 @@
           margin-left: 8px;
         }
       }
-    }
-    .container-detail {
-      display: flex;
-      flex-direction: column;
-    
-      .title {
-        color: $black;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
+      .container-detail {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          color: $black;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        
+        .detail {
+          color: $gray;
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 36px;
+        }
       }
-      
-      .detail {
-        color: $gray;
-        font-size: 20px;
-        line-height: 24px;
-        margin-bottom: 36px;
-      }
     }
-  }
+  }  
   @media only screen and (max-width: $flex-mobile) {
     height: 667px;
     width: 100%;
@@ -163,7 +155,6 @@
             font-weight: 700;
             line-height: 38px;
           }
-        
           .book-genre {
             font-size: 16px;
             font-weight: 700;
@@ -171,28 +162,28 @@
             margin-top: 10px;
           }
         }
-      }
 
-      .container-detail {
-        display: flex;
-        justify-content: flex-start;
-        width: 300px;
-        margin: 0 0 0 0;
-        padding-left: 16px;
-        margin-top: 18px;
+        .container-detail {
+          display: flex;
+          flex-direction: column;
+          margin-left: 18px;
+          margin-top: 18px;
 
-        .title {
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 24px;
+          .title {
+            color: $black;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+          }
+          
+          .detail {
+            color: $gray;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 18px;
+          }
         }
-        
-        .detail {
-          font-size: 14px;
-          line-height: 24px;
-          margin-bottom: 18px;
-        }
-      }
+      }  
     }
-  }
+  } 
 }

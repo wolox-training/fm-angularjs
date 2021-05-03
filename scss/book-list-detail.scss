@@ -1,9 +1,4 @@
-.list-master-container {
-  display: flex;
-  height: 768px;
-  width: 1366px;
-  justify-content: center;
-  align-items: center;
+.list-container {
   background-color: $wild-sand;
 
   .navbar-container {
@@ -17,7 +12,7 @@
     max-width: 1366px;
     background-color: $white;
     box-shadow: 0 4px 10px 0 $black-rgba;
-    justify-content: space-around;
+    justify-content: space-around;  
 
     .navbar {
       display: flex;
@@ -32,7 +27,7 @@
         height: 70px;
         width: 212px;
       }
-  
+
       .logout {
         color: $black;
         font-size: 18px;
@@ -40,7 +35,7 @@
       }
     }
   }
-  
+
   .master-book-list-container {
     display: flex;
     height: 636px;
@@ -79,7 +74,7 @@
           margin-bottom: 8px;
         }
     
-        .book-list-autor {
+        .book-list-author {
           color: $gray;
           font-size: 14px;
           line-height: 18px;
