@@ -1,3 +1,6 @@
+$width-badge: 95px;
+$height-badge: 119px;
+
 .index-container {
   flex-direction: column;
   background-color: $wild-sand;
@@ -37,8 +40,8 @@
       .badge {
         position: absolute;
         display: flex;
-        height: 119px;
-        width: 95px;
+        height: $height-badge;
+        width: $width-badge;
         transform: rotate(15deg);
         right: 25px;
         top: 10px;
@@ -53,8 +56,7 @@
       .container-book {
         display: flex;
         width: 540px;
-        margin-top: 24px;
-        margin-bottom: 52px;
+        margin: 24px 0 52px 0;
         border-bottom: 4px solid $earls-green;
 
         .book-title {
@@ -65,19 +67,18 @@
           margin-bottom: 12px;
           }
         
-          .book-genre {
-            color: $gray;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 28px;
-            margin-top: 5px;
-            margin-left: 8px;
-          }
+        .book-genre {
+          color: $gray;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28px;
+          margin: 5px 0 0 8px;
+        }
       }
       .container-detail {
         display: flex;
         flex-direction: column;
-      
+
         .title {
           color: $black;
           font-size: 20px;
@@ -92,6 +93,74 @@
           margin-bottom: 36px;
         }
       }
+    }
+  }  
+  @media only screen and (max-width: $flex-mobile) {
+    height: 667px;
+    width: 100%;
+    flex-direction: column-reverse;
+  
+    .return-button {
+      align-self: center;
+      font-size: 18px;
+      margin: 20px 0 0 0;
+    }
+
+    .cover-text-container {
+      flex-direction: column;
+      align-items: center;
+      height: 570px;
+      width: 336px;
+
+      .cover-page-badge-container {
+        margin-bottom: 21px;
+        
+        .cover-page {
+          height: 299px;
+          width: 212px;
+          margin: 38px 0 0 0;
+        }
+        
+        .badge {
+          width: calc(#{$width-badge} * 0.7);
+          height: calc(#{$height-badge} * 0.7);
+          right: -16px;
+          top: 27px;
+        }
+      }
+
+      .container-text {
+        height: 570px;
+        width: 336px;
+        
+        .container-book {
+          justify-content: flex-start;
+          width: 300px;
+          margin: 0 0 0 16px;
+        
+          .book-title {
+            font-size: 24px;
+          }
+          .book-genre {
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 10px;
+          }
+        }
+
+        .container-detail {
+          margin: 18px 0 0 18px;
+
+          .title {
+            font-size: 14px;
+          }
+          
+          .detail {
+            font-size: 14px;
+            margin-bottom: 18px;
+          }
+        }
+      }  
     }
   } 
 }
