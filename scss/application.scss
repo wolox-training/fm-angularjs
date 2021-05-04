@@ -1,3 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import 'equalizer';
+@import 'variables';
 @import 'detail';
+@import 'book-list-detail';
+@import 'login-detail';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  height: 32px;
+  width: 252px;
+  border-radius: 5px;
+
+  &.action-button {
+    background-color: $earls-green;
+    color: $white;
+  }
+
+  &.redirection-button {
+    background-color: $wild-sand;
+    border: 2px solid $earls-green;
+    color: $earls-green;
+  }
+}
+
+.master-container {
+  display: flex;
+  height: 768px;
+  width: 100%;
+  max-width: 1366px;
+  justify-content: center;
+  align-items: center;
+}
