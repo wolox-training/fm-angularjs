@@ -56,8 +56,7 @@ $height-badge: 119px;
       .container-book {
         display: flex;
         width: 540px;
-        margin-top: 24px;
-        margin-bottom: 52px;
+        margin: 24px 0 52px 0;
         border-bottom: 4px solid $earls-green;
 
         .book-title {
@@ -104,7 +103,6 @@ $height-badge: 119px;
     .return-button {
       align-self: center;
       font-size: 18px;
-      line-height: 24px;
       margin: 20px 0 0 0;
     }
 
@@ -139,10 +137,8 @@ $height-badge: 119px;
           justify-content: flex-start;
           width: 300px;
           margin: 0 0 0 16px;
-          border-bottom: 4px solid $earls-green;
         
           .book-title {
-            color: $black;
             font-size: 24px;
           }
           .book-genre {
@@ -153,18 +149,13 @@ $height-badge: 119px;
         }
 
         .container-detail {
-          display: flex;
-          flex-direction: column;
-          margin-left: 18px;
-          margin-top: 18px;
+          margin: 18px 0 0 18px;
 
           .title {
-            color: $black;
             font-size: 14px;
           }
           
           .detail {
-            color: $gray;
             font-size: 14px;
             margin-bottom: 18px;
           }
