@@ -80,6 +80,11 @@
           line-height: 18px;
         }
       }
+
+      &:hover {
+        transition: width 2s, height 2s, transform 1s;
+        transform: scaleX(1.1) scaleY(1.1);
+      }
     }
   }
 }
