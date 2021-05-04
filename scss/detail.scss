@@ -1,363 +1,166 @@
-@import 'variables';
+$width-badge: 95px;
+$height-badge: 119px;
 
-.body{
-  font-family: 'Roboto', sans-serif;
-}
-
-.master-container{
-  display: flex;
-  height: 768px;
-  width: 1366px;
+.index-container {
+  flex-direction: column;
   background-color: $wild-sand;
-  justify-content: center;
-  align-items: center;
 
-  .return-button{
-    display: flex;
-    flex-direction: row;
+  .return-button {
+    align-self: flex-start;
     color: $black;
     font-size: 20px;
     line-height: 24px;
-    position: absolute;
-    top: 46px;
-    right: 1042px;
-    bottom: 702px;
-    left: 265px;
-    content: "book-list.html";
-  }
+    margin-bottom: 108px;
+    margin-left: 233px;
 
-  .return-button::before{
-    margin-right: 12px;
-    content: url(https://trello-attachments.s3.amazonaws.com/607457e8ad4162814da41ef0/607457e8ad4162814da41f0a/x/e42f9110cec094df3e49702baa8263f7/back-arrow-20.png);
-  }
-
-  .navbar-container{
-    position: fixed;
-    top: 0;
-
-    .border{
-      height: 6px;
-      width: 1366px;
-      background-color: $cerulean;
-    }
-
-    .navbar{
-      height: 70px;
-      width: 1366px;
-      background-color: $white;
-      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
-
-      .wolox-logo{
-        position: absolute;
-        left: 246px;
-        right: 908px;
-        height: 70px;
-        width: 212.42px;
-      }
-
-      .logout{
-        position: absolute;
-        top: 26px;
-        right: 246px;
-        bottom: 26px;
-        left: 1057px;
-        color: $black;
-        font-size: 18px;
-        line-height: 21px;
-      }
+    &::before{
+      margin-right: 12px;
+      content: url(Images/back-arrow-20.png);
     }
   }
-
-  .master-book-list-container{
+  
+  .cover-text-container {
+    position: relative;
     display: flex;
-    height: 636px;
-    width: 900px;
-    background-color: $wild-sand;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 36px;
-  
-    .book-container{
-      display: flex;
-      height: 300px;
-      width: 198px;
-      background-color: $white;
-      box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
-      flex-direction: column;
-      justify-content: center;
-  
-      .cover-page-list{
-        height: 200px;
-        width: 142px;
-        align-self: center;
-      }
-  
-      .book-list-detail{
-        display: flex;
-        flex-direction: column;
-        margin-top: 12px;
-        padding-left: 28px;
-        
-  
-        .book-list-title{
-          color: $black;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 18px;
-          margin-bottom: 8px;
-        }
-  
-        .book-list-autor{
-          color: $gray;
-          font-size: 14px;
-          line-height: 18px;
-        }
-      }
-
-      &:hover{
-        transition: width 2s, height 2s, transform 1s;
-        transform: scaleX(1.1) scaleY(1.1);
-      }
-    }
-
-  }
-  .cover-text-container{
-    display: flex;
-    flex-direction: row;
     height: 416px;
     width: 900px;
     background-color: $white;
-    box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
-  
-    .cover-page{
+    box-shadow: 4px 4px 10px 0 $black-rgba;
+
+    .cover-page-badge-container {
       display: flex;
-      height: 368px;
-      width: 261px;
-      margin: 24px 52px 24px 24px;
-    }
-  
-    .container-text{
-      display: flex;
-      flex-direction: column;
-      margin-top: 24px;
-    
-      .book-title{
-        color: $black;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
+      position: relative;
+      
+      .cover-page {
+        height: 368px;
+        width: 261px;
+        margin: 24px 52px 24px 24px;
       }
       
-      .title-border{
-        height: 4px;
+      .badge {
+        position: absolute;
+        display: flex;
+        height: $height-badge;
+        width: $width-badge;
+        transform: rotate(15deg);
+        right: 25px;
+        top: 10px;
+        z-index: 1;
+      }
+    }
+
+    .container-text {
+      display: flex;
+      flex-direction: column;
+
+      .container-book {
+        display: flex;
         width: 540px;
-        background-color: $earls-green;
-        margin-bottom: 36px;
-      }
-      
-      .title-genre{
-        color: $gray;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28px;
-        margin-bottom: 12px;
-      }
-    }
-    
-    .container-secondary-text{
-      display: flex;
-      flex-direction: column;
-    
-      .secondary-title{
-        color: $black;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-      }
-      
-      .secondary-detail{
-        color: $gray;
-        font-size: 20px;
-        line-height: 24px;
-        margin-bottom: 36px;
-      }
-    }
-  }
-  .badge{
-    position: absolute;
-    display: flex;
-    height: 119px;
-    width: 95px;
-    transform: rotate(15deg);
-    top: 178px;
-    right: 815px;
-    bottom: 472px;
-    left: 457px;
-    z-index: 1;
-  }
+        margin: 24px 0 52px 0;
+        border-bottom: 4px solid $earls-green;
 
-  /* Mobile view */
-  @media only screen and (max-width: 1024px){
+        .book-title {
+          color: $black;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 38px;
+          margin-bottom: 12px;
+          }
+        
+        .book-genre {
+          color: $gray;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28px;
+          margin: 5px 0 0 8px;
+        }
+      }
+      .container-detail {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          color: $black;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+        
+        .detail {
+          color: $gray;
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }  
+  @media only screen and (max-width: $flex-mobile) {
     height: 667px;
-    width: 376px;
+    width: 100%;
+    flex-direction: column-reverse;
   
-    .return-button{
+    .return-button {
+      align-self: center;
       font-size: 18px;
-      line-height: 24px;
-      position: absolute;
-      top: 637px;
-      right: 142px;
-      bottom: 25px;
-      left: 142px;
+      margin: 20px 0 0 0;
     }
 
-    .cover-text-container{
+    .cover-text-container {
       flex-direction: column;
-      justify-content: space-evenly;
       align-items: center;
       height: 570px;
       width: 336px;
 
-      .cover-page{
-        height: 299px;
-        width: 212px;
-        margin: 0 0 0 0;
+      .cover-page-badge-container {
+        margin-bottom: 21px;
+        
+        .cover-page {
+          height: 299px;
+          width: 212px;
+          margin: 38px 0 0 0;
+        }
+        
+        .badge {
+          width: calc(#{$width-badge} * 0.7);
+          height: calc(#{$height-badge} * 0.7);
+          right: -16px;
+          top: 27px;
+        }
       }
 
-      .container-text{
-        margin-top: 0;
-        justify-content: space-evenly;
-  
-        .book-title{
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 38px;
-        }
-
-        .title-border{
-          height: 4px;
+      .container-text {
+        height: 570px;
+        width: 336px;
+        
+        .container-book {
+          justify-content: flex-start;
           width: 300px;
-          margin-bottom: 18px;
-        }
+          margin: 0 0 0 16px;
         
-        .title-genre{
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 19px;
-          margin-bottom: 0;
+          .book-title {
+            font-size: 24px;
+          }
+          .book-genre {
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 10px;
+          }
         }
-      }
 
-      .container-secondary-text{
-      
-        .secondary-title{
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 24px;
+        .container-detail {
+          margin: 18px 0 0 18px;
+
+          .title {
+            font-size: 14px;
+          }
+          
+          .detail {
+            font-size: 14px;
+            margin-bottom: 18px;
+          }
         }
-        
-        .secondary-detail{
-          font-size: 14px;
-          line-height: 24px;
-          margin-bottom: 18px;
-        }
-      }
+      }  
     }
-    .badge{
-      $width: 95px;
-      width: calc(#{$width * 0.7});
-      $height: 119px;
-      height: calc(#{$height * 0.7});
-      top: 62px;
-      right: 65px;
-      bottom: 534px;
-      left: 245px;
-    }
-  }
-}
-
-.login-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 400px;
-  width: 300px;
-  background-color: $wild-sand;
-  padding-bottom: 24px;
-
-  .border{
-    height: 8px;
-    width: 300px;
-    background-color: $cerulean;
-  }
-
-  .wolox-logo{
-    align-self: center;
-    height: 70px;
-    width: 212px;
-  }
-
-  .text{
-    display: flex;
-    align-self: flex-start;
-    color: $black;
-    font-size: 16px;
-    line-height: 24px;
-    margin-left: 24px;
-  }
-
-  .credentials-box{
-    height: 32px;
-    width: 252px;
-    border-radius: 5px;
-    background-color: $white;
-  }
-
-  .button{
-
-    .login-button{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      height: 32px;
-      width: 252px;
-      border-radius: 5px;
-      background-color: $earls-green;
-
-      .login-text{
-        color: $white;
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    .signup-button{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      box-sizing: border-box;
-      height: 32px;
-      width: 252px;
-      border-radius: 5px;
-      background-color: $wild-sand;
-      border: 2px solid $earls-green;
-
-      .signup-text{
-        color: $earls-green;
-        font-size: 16px;
-        line-height: 24px;
-        background-color: $wild-sand;
-      }
-    }
-  }
-
-  .separator{
-    height: 2px;
-    width: 252px;
-    background-color: $silver-chalice;  
-  }
+  } 
 }
