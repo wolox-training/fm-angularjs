@@ -1,22 +1,27 @@
+$width-badge: 95px;
+$height-badge: 119px;
+
 .index-master-container {
   display: grid;
   height: 768px;
   max-width: 1366px;
   width: 100%;
   background-color: $wild-sand;
-  grid-template-rows: 768px;
+  grid-template-rows: 173px 416px 173px;
   justify-content: center;
   align-content: center;
-  grid-template-areas: 
-  "cover-text";
+  grid-template-areas:
+  "return" 
+  "cover-text"
+  ".";
 
   .return-button {
-    align-self: flex-start;
+    align-self: flex-end;
     color: $black;
     font-size: 20px;
     line-height: 24px;
+    grid-area: return;
     margin-bottom: 108px;
-    margin-left: 233px;
 
     &::before{
       margin-right: 12px;
@@ -124,7 +129,6 @@
   @media only screen and (max-width: $tablet){
     height: 768px;
     width: 1024px;
-    display: grid;
     grid-template-rows: 99px 569px 100px;
     grid-template-areas:
       "return-button"
@@ -133,19 +137,12 @@
 
     .return-button {
       font-size: 18px;
-      content: "book-list.html";
       grid-area: return-button;
       justify-self: flex-start;
-      margin: 0;
-      margin-top: 20px;
-
-      &::before {
-        margin-right: 12px;
-      }
+      margin: 0 0 33px 0;
     }
 
     .cover-text-container {
-      display: grid;
       height: 569px;
       width: 853px;
       grid-area: container;
@@ -165,27 +162,16 @@
         align-self: center;
         justify-self: center;
         grid-area: image;
-
-        .cover-page {
-          height: 368px;
-          width: 261px;
-          margin: 0px 0px 0px 0px;
-        }
         
         .badge {
-          $width: 95px;
-          width: calc(#{$width} * 0.7);
-          $height: 119px;
-          height: calc(#{$height} * 0.7);
+          width: calc(#{$width-badge} * 0.7);
+          height: calc(#{$height-badge} * 0.7);
           right: -16px;
           top: -10px;
         }
       }
 
       .book-title {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
         margin: 0;
         grid-area: title;
         justify-self: flex-start;
@@ -193,14 +179,10 @@
       }
       
       .book-genre {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28px;
-        margin: 0;
+        margin: 0 0 0 50px;
         grid-area: genre;
         justify-self: flex-start;
         align-self: flex-start;
-        margin-left: 50px;
       }
 
       .container-text {
@@ -208,35 +190,27 @@
         justify-self: flex-start;
         align-self: center;
         width: 470px;
-        margin: 0;
+        margin: 0 20px 0 0;
         grid-area: description;
         border-top: 0;
-        margin-right: 20px;
 
         .container-book {
           display: grid;
           width: 336px;
-          margin: 0 0 0 0;
+          margin: 0;
           border-bottom: 0;
           grid-area: spacing;
         }
       
         .container-detail {
-          display: flex;
-          padding-left: 0;
-          margin: 0;
           grid-area: details;
           
           .title {
             font-size: 24px;
-            font-weight: 700;
-            line-height: 24px;
           }
           
           .detail {
             font-size: 24px;
-            line-height: 24px;          
-            margin-bottom: 36px;
           }
         }
       }
@@ -246,7 +220,6 @@
   @media only screen and (max-width: $mobile) {
     height: 667px;
     width: 376px;
-    display: grid;
     grid-template-rows: 32px 570px 65px;
     grid-template-areas:
       "."
@@ -255,19 +228,12 @@
 
     .return-button {
       font-size: 18px;
-      content: "book-list.html";
       grid-area: return-button;
       justify-self: center;
-      margin: 0;
-      margin-top: 20px;
-
-      &::before {
-        margin-right: 12px;
-      }
+      margin: 20px 0 0 0;
     }
 
     .cover-text-container {
-      display: grid;
       height: 570px;
       width: 336px;
       grid-area: container;
@@ -290,15 +256,12 @@
         .cover-page {
           height: 299px;
           width: 212px;
-          margin: 0px 0px 0px 0px;
           grid-area: image;
         }
         
         .badge {
-          $width: 95px;
-          width: calc(#{$width} * 0.7);
-          $height: 119px;
-          height: calc(#{$height} * 0.7);
+          width: calc(#{$width-badge} * 0.7);
+          height: calc(#{$height-badge} * 0.7);
           right: -16px;
           top: -10px;
         }
@@ -306,22 +269,16 @@
 
       .book-title {
         font-size: 24px;
-        font-weight: 700;
-        line-height: 38px;
-        margin: 0;
-        justify-self: center;
         align-self: center;
+        justify-self: center;
         grid-area: title;
       }
       
       .book-genre {
         font-size: 16px;
-        font-weight: 700;
         line-height: 19px;
-        margin: 0;
+        margin: 16px 0 0 0;
         grid-area: genre;
-        margin-top: 24px;
-        align-self: center;
         justify-self: center;
       }
 
@@ -330,8 +287,7 @@
         justify-self: center;
         align-self: center;
         width: 300px;
-        margin-left: 18px;
-        margin-right: 18px;
+        margin: 0 18px;
         grid-area: description;
         border-top: 4px solid $earls-green;
         grid-template-rows: 18px 126px;
@@ -342,25 +298,20 @@
         .container-book {
           display: grid;
           width: 336px;
-          margin: 0 0 0 0;
+          margin: 0;
           border-bottom: 0;
           grid-area: spacing;
         }
       
         .container-detail {
-          padding-left: 0;
-          margin: 0;
           grid-area: details;
           
           .title {
             font-size: 14px;
-            font-weight: 700;
-            line-height: 24px;
           }
           
           .detail {
             font-size: 14px;
-            line-height: 24px;
             margin-bottom: 18px;
           }
         }
@@ -368,4 +319,3 @@
     }
   }
 }
-

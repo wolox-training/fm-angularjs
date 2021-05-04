@@ -1,10 +1,4 @@
-.login-master-container {
-  display: flex;
-  height: 768px;
-  max-width: 1366px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+.login-master-container{
   background-color: $white;
 
   .login-container {
@@ -40,22 +34,25 @@
       margin-bottom: 16px;
     }
 
+    .link-book-list{
+      color: $white;
+    }
+
     .redirection-button{
       margin-top: 16px;
     }
-  }
-}
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px solid $silver-chalice;
-  margin-top: 16px;
-
-  .button:first-of-type {
-    margin-top: 8px;
-    margin-bottom: 16px;
+    .login-form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid $silver-chalice;
+      margin-top: 16px;
+    
+      .button:first-of-type{
+        margin: 8px 0 16px;
+      }
+    }
   }
 }
