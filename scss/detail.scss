@@ -4,7 +4,7 @@ $height-badge: 119px;
 .index-master-container {
   display: grid;
   height: 768px;
-  max-width: 1366px;
+  max-width: $desktop;
   width: 100%;
   background-color: $wild-sand;
   grid-template-rows: 173px 416px 173px;
@@ -41,8 +41,8 @@ $height-badge: 119px;
     grid-template-columns: 309px 250px 341px;
     grid-template-rows: 75px 341px;
     grid-template-areas:
-    "image titulo genero"
-    "image text text";
+    "image title genre"
+    "image description description";
 
     .cover-page-badge-container {
       display: flex;
@@ -76,7 +76,7 @@ $height-badge: 119px;
       font-weight: 700;
       line-height: 38px;
       align-self: center;
-      grid-area: titulo;
+      grid-area: title;
       margin-left: 28px;
     }
   
@@ -88,26 +88,21 @@ $height-badge: 119px;
       line-height: 28px;
       align-self: center;
       margin-top: 8px;
-      grid-area: genero;
+      grid-area: genre;
       margin-left: 20px;
     }
 
     .container-text {
-      grid-area: text;
+      grid-area: description;
       display: flex;
       flex-direction: column;
       margin-left: 28px;
-      
-      .container-book {
-        display: flex;
-        width: 540px;
-        margin-bottom: 36px;
-        border-bottom: 4px solid $earls-green;
-      }
+      border-top: 4px solid $earls-green;
 
       .container-detail {
         display: flex;
         flex-direction: column;
+        margin-top: 36px;
       
         .title {
           color: $black;
@@ -194,16 +189,7 @@ $height-badge: 119px;
         grid-area: description;
         border-top: 0;
 
-        .container-book {
-          display: grid;
-          width: 336px;
-          margin: 0;
-          border-bottom: 0;
-          grid-area: spacing;
-        }
-      
         .container-detail {
-          grid-area: details;
           
           .title {
             font-size: 24px;
@@ -292,19 +278,12 @@ $height-badge: 119px;
         border-top: 4px solid $earls-green;
         grid-template-rows: 18px 126px;
         grid-template-areas:
-        "spacing" 
+        "." 
         "details";
-
-        .container-book {
-          display: grid;
-          width: 336px;
-          margin: 0;
-          border-bottom: 0;
-          grid-area: spacing;
-        }
       
         .container-detail {
           grid-area: details;
+          margin: 0;
           
           .title {
             font-size: 14px;
