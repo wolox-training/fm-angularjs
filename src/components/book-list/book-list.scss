@@ -28,6 +28,14 @@
         width: 212px;
       }
 
+      .book-search{
+        height: 35px;
+        width: 350px;
+        border-radius: 3px;
+        border: 2px solid $cerulean;
+        background-color: $wild-sand;
+      }
+
       .logout {
         color: $black;
         font-size: 18px;

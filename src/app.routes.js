@@ -5,7 +5,7 @@ angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
     $stateProvider
       .state('home', {
         url: '/',
-        component: 'centered'
+        component: 'bookList'
       }).state('component1',
       {
         url: '/component1',
