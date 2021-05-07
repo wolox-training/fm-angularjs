@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="master-book-list-container">
-    <div class="book-container" ng-repeat= "book in $ctrl.bookList | filter:searchtxt">
+    <div class="book-container" ng-repeat="book in $ctrl.bookList | filter:searchtxt">
       <img class="cover-page-list" ng-if="book.image_url" ng-src="{{book.image_url}}" alt="Cover page"/>
       <img class="cover-page-list" ng-if="!book.image_url" src="../../assets/book-cover.png" alt="Wolox books cover page"/>
       <div class="book-list-detail">

@@ -5,10 +5,10 @@
 
 @import 'base';
 
-@import '../components/book-list/book-list.scss';
+@import '../components/book-list/book-list';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .button {
