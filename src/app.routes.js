@@ -3,13 +3,13 @@ const angular = require('angular');
 angular.module('app-bootstrap').config(['$stateProvider', '$urlRouterProvider',
   function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('bookList', {
         url: '/',
         component: 'bookList'
-      }).state('component1',
+      }).state('login',
       {
-        url: '/component1',
-        component: 'component1'
+        url: '/login',
+        component: 'login'
       }).state('component2',
       {
         url: '/component2',

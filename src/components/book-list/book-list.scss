@@ -63,7 +63,7 @@
   box-shadow: 4px 4px 10px 0 $black-rgba;
   flex-direction: column;
   justify-content: center;
-  
+
   &:hover {
     transition: width 2s, height 2s, transform 1s;
     transform: scaleX(1.1) scaleY(1.1);
