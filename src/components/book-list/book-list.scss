@@ -47,12 +47,12 @@
 
 .master-book-list-container {
   display: flex;
-  height: 636px;
   width: 900px;
   background-color: $wild-sand;
-  flex-flow: column wrap;
-  justify-content: space-around;
+  flex-flow: wrap;
+  justify-content: flex-start;
   align-items: center;
+  margin-top: 100px;
 }
 
 .book-container {
@@ -63,6 +63,7 @@
   box-shadow: 4px 4px 10px 0 $black-rgba;
   flex-direction: column;
   justify-content: center;
+  margin: 0 20px 20px 0;
   
   &:hover {
     transition: width 2s, height 2s, transform 1s;

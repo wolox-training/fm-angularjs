@@ -2,14 +2,14 @@
   <div class="navbar-container">
     <div class="navbar">
       <img class="wolox-logo" src="../../assets/LogoWolox.png" alt="wolox logo">
-      <input class="book-search" ng-model="searchtxt" type="text" placeholder="Buscá por título del libro...">
+      <input class="book-search" ng-model="searchText" type="text" placeholder="Buscá por título del libro...">
       <button class="logout">Logout</button>
     </div>
   </div>
   <div class="master-book-list-container">
     <div class="book-container" ng-repeat="book in $ctrl.bookList | filter:searchtxt">
-      <img class="cover-page-list" ng-if="book.image_url" ng-src="{{book.image_url}}" alt="Cover page"/>
-      <img class="cover-page-list" ng-if="!book.image_url" src="../../assets/book-cover.png" alt="Wolox books cover page"/>
+      <img class="cover-page-list" ng-src="{{book.image_url || 'assets/book-cover.png'}}"
+        alt="{{book.image_url ? 'Cover page' : 'Wolox books cover page'}}" />
       <div class="book-list-detail">
         <p class="book-list-title">
           {{book.title}}
@@ -18,6 +18,6 @@
           {{book.author}}
         </p>
       </div>
-    </div> 
+    </div>
   </div>
 </div>
