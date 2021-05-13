@@ -1,18 +1,19 @@
 <div class="master-container login-master-container">
   <div class="login-container">
     <img class="wolox-logo" src="../../assets/LogoWolox.png" alt="wolox logo">
-    <form class="login-form" name="MyForm">
+    <form class="login-form" name="MyForm" ng-submit="$ctrl.tryLogin(emailAddress, password)">
       <label class="text"> Email </label>
       <input type="email" class="credentials-box" ng-model="emailAddress" name="email" required
-        ng-pattern="/^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/" />
+        ng-pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' />
       <span class="error" ng-show="MyForm.email.$error.required">*Campo Requerido</span> <span class="error"
         ng-show="MyForm.email.$error.pattern">*Invalid Email Address</span>
       <label class="text"> Password </label>
       <input type="password" class="credentials-box" ng-model="password" name="password" required />
       <span class="error" ng-show="MyForm.password.$error.required">*Campo Requerido</span>
-      <a ui-sref="bookList" ng-disabled="MyForm.$invalid" class="button action-button" ui-sref-active="active">
+      <button type="submit" ng-disabled="MyForm.$invalid" class="button action-button">
         Login
-      </a>
+      </button>
+      <span class="error"  ng-show="$ctrl.loginError">*Invalid Credentials</span>
     </form>
     <a class="button redirection-button">
       Sign Up
