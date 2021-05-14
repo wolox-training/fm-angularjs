@@ -7,7 +7,11 @@ angular.module('app-bootstrap').component('login', {
       userService.login(email, password)
         .then(response => {
           const AccessTokenValue = response.headers('access-token');
+          const uid = response.headers('uid');
+          const client = response.headers('client');
           $window.localStorage.setItem('AccessToken', AccessTokenValue);
+          $window.localStorage.setItem('uid', uid);
+          $window.localStorage.setItem('client', client);
           $state.transitionTo('bookList');
         })
         .catch(error => {
