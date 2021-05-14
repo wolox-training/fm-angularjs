@@ -5,11 +5,11 @@
       <label class="text"> Email </label>
       <input type="email" class="credentials-box" ng-model="emailAddress" name="email" required
         ng-pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' />
-      <span class="error" ng-show="MyForm.email.$error.required">*Campo Requerido</span> <span class="error"
+      <span class="error" ng-show="MyForm.email.$error.required">*Required</span> <span class="error"
         ng-show="MyForm.email.$error.pattern">*Invalid Email Address</span>
       <label class="text"> Password </label>
       <input type="password" class="credentials-box" ng-model="password" name="password" required />
-      <span class="error" ng-show="MyForm.password.$error.required">*Campo Requerido</span>
+      <span class="error" ng-show="MyForm.password.$error.required">*Required</span>
       <button type="submit" ng-disabled="MyForm.$invalid" class="button action-button">
         Login
       </button>
